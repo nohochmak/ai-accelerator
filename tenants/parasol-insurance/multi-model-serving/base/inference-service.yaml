@@ -11,12 +11,12 @@ spec:
   predictor:
     model:
       modelFormat:
-        name: <add format name here>
+        name: onnx
         version: '1'
       name: ''
       resources: {}
-      runtime: <add runtime>
+      runtime: multi-model-server
       storage:
-        key: <add data connection here>
-        path: <Add model path here>
+        key: accident-model-data-conn
+        path: accident_model/accident_detect.onnx
 
