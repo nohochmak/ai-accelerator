@@ -1,0 +1,22 @@
+apiVersion: serving.kserve.io/v1beta1
+kind: InferenceService
+metadata:
+  annotations:
+    openshift.io/display-name: accident-detect-model
+    serving.kserve.io/deploymentMode: ModelMesh
+  name: accident-detect-model
+  labels:
+    opendatahub.io/dashboard: 'true'
+spec:
+  predictor:
+    model:
+      modelFormat:
+        name: <add format name here>
+        version: '1'
+      name: ''
+      resources: {}
+      runtime: <add runtime>
+      storage:
+        key: <add data connection here>
+        path: <Add model path here>
+
